@@ -2526,7 +2526,7 @@ while true; do
     ## Pergunta o nome da Rede Interna
     echo -e "\e[97mPasso$amarelo 3/4\e[0m"
     echo -e "$amarelo--> Não pode conter Espaços e/ou cartacteres especiais."
-    echo -en "\e[33mDigite um nome para sua rede interna (ex: OrionNet): \e[0m" && read -r nome_rede_interna
+    echo -en "\e[33mDigite um nome para sua rede interna (ex: CloudNet): \e[0m" && read -r nome_rede_interna
     echo ""
     
     ## Pergunta o Email para informações sobre o certificado
