@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 versao() {
@@ -10,7 +10,7 @@ echo -e "\e[32mcloudbr.app/whatsapp1      \e[97m<----- Grupos no WhatsApp ----->
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Cores do Setup
@@ -23,13 +23,13 @@ vermelho="\e[91m"
 reset="\e[0m"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 menu_instalador="1"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 home_directory="$HOME"
@@ -41,7 +41,7 @@ dados() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Licença do Setup
@@ -54,7 +54,7 @@ direitos_setup() {
     echo -e "$amarelo=  $branco  disponíveis no mercado open source. Já deixo todos os créditos aos desenvolvedores de cada $amarelo  =\e[0m"
     echo -e "$amarelo=  $branco aplicação disponíveis aqui. Este Setup é licenciado sob a Licença MIT (MIT). Você pode usar, $amarelo =\e[0m"
     echo -e "$amarelo=  $branco  copiar, modificar, integrar, publicar, distribuir e/ou vender cópias dos produtos finais,  $amarelo  =\e[0m"
-    echo -e "$amarelo=  $branco   mas deve sempre declarar que OrionDesign (contato@cloudbr.app) é o autor original  $amarelo  =\e[0m"
+    echo -e "$amarelo=  $branco   mas deve sempre declarar que CloudBR (contato@cloudbr.app) é o autor original  $amarelo  =\e[0m"
     echo -e "$amarelo=  $branco           destes códigos e atribuir um link para https://cloudbr.app/setup           $amarelo  =\e[0m"
     echo -e "$amarelo=                                                                                                 =\e[0m"
     echo -e "$amarelo===================================================================================================\e[0m"
@@ -69,7 +69,7 @@ direitos_instalador() {
     echo -e "$amarelo=  $branco  disponíveis no mercado open source. Já deixo todos os créditos aos desenvolvedores de cada $amarelo  =\e[0m"
     echo -e "$amarelo=  $branco aplicação disponíveis aqui. Este Setup é licenciado sob a Licença MIT (MIT). Você pode usar, $amarelo =\e[0m"
     echo -e "$amarelo=  $branco  copiar, modificar, integrar, publicar, distribuir e/ou vender cópias dos produtos finais,  $amarelo  =\e[0m"
-    echo -e "$amarelo=  $branco   mas deve sempre declarar que OrionDesign (contato@cloudbr.app) é o autor original  $amarelo  =\e[0m"
+    echo -e "$amarelo=  $branco   mas deve sempre declarar que CloudBR (contato@cloudbr.app) é o autor original  $amarelo  =\e[0m"
     echo -e "$amarelo=  $branco           destes códigos e atribuir um link para https://cloudbr.app/setup           $amarelo  =\e[0m"
     echo -e "$amarelo=                                                                                                 =\e[0m"
     echo -e "$amarelo===================================================================================================\e[0m"
@@ -144,7 +144,7 @@ creditos_msg() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Mensagens gerais
@@ -272,7 +272,7 @@ nome_credenciais() {
     info_credenciais
 }
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Titulos
@@ -1328,7 +1328,7 @@ nome_portainer.reset() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Defasados
@@ -1367,7 +1367,7 @@ nome_finalizado() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Menu de opções
@@ -1467,7 +1467,7 @@ menu_instalador_pg_2(){
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 
@@ -1817,7 +1817,7 @@ atualizar_arquivo() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Verificadores
@@ -2147,7 +2147,7 @@ requisitar_outra_instalacao(){
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Pegar informações
@@ -2219,7 +2219,7 @@ pegar_link_s3() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Criadores de banco de dados Postgres
@@ -2318,7 +2318,7 @@ criar_banco_pgvector_da_stack () {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Criadores de banco de dados Mysql
@@ -2372,7 +2372,7 @@ criar_banco_mysql_da_stack() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Instalação das Ferramentas
@@ -2398,7 +2398,7 @@ echo ""
 
 echo -e "\e[97mPasso$amarelo 2/5\e[0m"
 echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-echo -en "\e[33mDigite o usuário de Email (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_teste
+echo -en "\e[33mDigite o usuário de Email (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_teste
 echo ""
 
 echo -e "\e[97mPasso$amarelo 3/5\e[0m"
@@ -2453,7 +2453,7 @@ sudo apt-get update > /dev/null 2>&1
 sudo apt-get install swaks -y > /dev/null 2>&1
 
 msg="Se você está lendo isso, o seu SMTP está funcionando =D.
-By: OrionDesign"
+By: CloudBR"
 
 if swaks --to "$email_teste" --from "$email_teste" --server "$host_teste" --port "$porta_teste" --auth LOGIN --auth-user "$user_teste" --auth-password "$senha_teste" --tls --body "$msg"; then
     sleep 2
@@ -2520,7 +2520,7 @@ while true; do
     ## Pergunta o Nome do Servidor
     echo -e "\e[97mPasso$amarelo 2/4\e[0m"
     echo -e "$amarelo--> Não pode conter Espaços e/ou cartacteres especiais"
-    echo -en "\e[33mEscolha um nome para o seu servidor (ex: OrionDesign): \e[0m" && read -r nome_servidor
+    echo -en "\e[33mEscolha um nome para o seu servidor (ex: CloudBR): \e[0m" && read -r nome_servidor
     echo ""
     
     ## Pergunta o nome da Rede Interna
@@ -3856,7 +3856,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_chatwoot
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_chatwoot
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -5052,7 +5052,7 @@ services:
       ## Configuração do Cliente
       ## Pegue a versão em: https://web.whatsapp.com/check-update?version=0&platform=web
       - CONFIG_SESSION_PHONE_VERSION=2.3000.1015901307
-      - CONFIG_SESSION_PHONE_CLIENT=OrionDesign
+      - CONFIG_SESSION_PHONE_CLIENT=CloudBR
       - CONFIG_SESSION_PHONE_NAME=Chrome
       
       ## Configuração do Banco de Dados
@@ -5399,14 +5399,14 @@ services:
 
 ## --------------------------- ORION --------------------------- ##
 
-  evolution_oriondesign:
+  evolution_cloudbr:
     image: atendai/evolution-api:latest ## Versão da Evolution API
     command: ["node", "./dist/src/main.js"]
 
     volumes:
-    - evolution_oriondesign_instances:/evolution/instances
-    - evolution_oriondesign_store:/evolution/store
-    - evolution_oriondesign_views:/evolution/views
+    - evolution_cloudbr_instances:/evolution/instances
+    - evolution_cloudbr_store:/evolution/store
+    - evolution_cloudbr_views:/evolution/views
 
     networks:
       - $nome_rede_interna ## Nome da rede interna
@@ -5421,7 +5421,7 @@ services:
     - AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
 
     ## Configurações
-    - CONFIG_SESSION_PHONE_CLIENT=OrionDesign ## Nome que aparece no celular
+    - CONFIG_SESSION_PHONE_CLIENT=CloudBR ## Nome que aparece no celular
     - CONFIG_SESSION_PHONE_NAME=chrome
 
     ## Definir versão do Whatsapp Web
@@ -5519,26 +5519,26 @@ services:
         - node.role == manager
       labels:
       - traefik.enable=1
-      - traefik.http.routers.evolution_oriondesign.rule=Host(\`$url_evolution\`) ## Url da aplicação
-      - traefik.http.routers.evolution_oriondesign.entrypoints=websecure
-      - traefik.http.routers.evolution_oriondesign.priority=1
-      - traefik.http.routers.evolution_oriondesign.tls.certresolver=letsencryptresolver
-      - traefik.http.routers.evolution_oriondesign.service=evolution_oriondesign
-      - traefik.http.services.evolution_oriondesign.loadbalancer.server.port=8080
-      - traefik.http.services.evolution_oriondesign.loadbalancer.passHostHeader=1
+      - traefik.http.routers.evolution_cloudbr.rule=Host(\`$url_evolution\`) ## Url da aplicação
+      - traefik.http.routers.evolution_cloudbr.entrypoints=websecure
+      - traefik.http.routers.evolution_cloudbr.priority=1
+      - traefik.http.routers.evolution_cloudbr.tls.certresolver=letsencryptresolver
+      - traefik.http.routers.evolution_cloudbr.service=evolution_cloudbr
+      - traefik.http.services.evolution_cloudbr.loadbalancer.server.port=8080
+      - traefik.http.services.evolution_cloudbr.loadbalancer.passHostHeader=1
 
 ## --------------------------- ORION --------------------------- ##
 
 volumes:
-  evolution_oriondesign_instances:
+  evolution_cloudbr_instances:
     external: true
-    name: evolution_oriondesign_instances
-  evolution_oriondesign_store:
+    name: evolution_cloudbr_instances
+  evolution_cloudbr_store:
     external: true
-    name: evolution_oriondesign_store
-  evolution_oriondesign_views:
+    name: evolution_cloudbr_store
+  evolution_cloudbr_views:
     external: true
-    name: evolution_oriondesign_views
+    name: evolution_cloudbr_views
 networks:
   $nome_rede_interna: ## Nome da rede interna
     name: $nome_rede_interna ## Nome da rede interna
@@ -5779,7 +5779,7 @@ services:
       ## Configuração do Cliente
       ## Pegue a versão em: https://web.whatsapp.com/check-update?version=0&platform=web
       - CONFIG_SESSION_PHONE_VERSION=2.3000.1015901307
-      - CONFIG_SESSION_PHONE_CLIENT=OrionDesign
+      - CONFIG_SESSION_PHONE_CLIENT=CloudBR
       - CONFIG_SESSION_PHONE_NAME=Chrome
       
       ## Configuração do Banco de Dados
@@ -6053,7 +6053,7 @@ while true; do
     ##Pergunta o Usuario para o Minio
     echo -e "\e[97mPasso$amarelo 3/4\e[0m"
     echo -e "$amarelo--> Evite os caracteres especiais: \!#$ e/ou espaço"
-    echo -en "\e[33mDigite um usuario para o MinIO (ex: OrionDesign): \e[0m" && read -r user_minio
+    echo -en "\e[33mDigite um usuario para o MinIO (ex: CloudBR): \e[0m" && read -r user_minio
     echo ""
     
     ##Pergunta a Senha para o Minio
@@ -6314,7 +6314,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 5/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_email_typebot
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_email_typebot
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -6746,7 +6746,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 4/7\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_n8n
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_n8n
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -7713,7 +7713,7 @@ while true; do
     
     ##Pergunta um Usuario para a ferramenta
     echo -e "\e[97mPasso$amarelo 3/4\e[0m"
-    echo -en "\e[33mDigite um nome de usuario para o Nocobase (ex: OrionDesign): \e[0m" && read -r user_nocobase
+    echo -en "\e[33mDigite um nome de usuario para o Nocobase (ex: CloudBR): \e[0m" && read -r user_nocobase
     echo ""
     
     ##Pergunta a Senha para a ferramenta
@@ -8530,7 +8530,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_baserow
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -8836,7 +8836,7 @@ while true; do
     ## Pergunta o nome de usuario
     echo -e "\e[97mPasso$amarelo 1/1\e[0m"
     echo -e "$amarelo--> Evite os caracteres especiais: @\!#$ e/ou espaço"
-    echo -en "\e[33mDigite o nome de usuario (ex: oriondesign): \e[0m" && read -r user_mongo
+    echo -en "\e[33mDigite o nome de usuario (ex: CloudBR): \e[0m" && read -r user_mongo
     echo ""
     
     ## Gera a senha aleatória
@@ -9062,7 +9062,7 @@ while true; do
     
     echo -e "\e[97mPasso$amarelo 2/2\e[0m"
     echo -e "$amarelo--> Evite os caracteres especiais: @\!#$ e/ou espaço"
-    echo -en "\e[33mDigite o nome de usuario (ex: OrionDesign): \e[0m" && read -r user_rabbitmq
+    echo -en "\e[33mDigite o nome de usuario (ex: CloudBR): \e[0m" && read -r user_rabbitmq
     echo ""
     
     ## Gera a senha aleatória
@@ -9501,7 +9501,7 @@ while true; do
     ## Pergunta o Ususario SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_calcom
+    echo -en "\e[33mDigite o Usuario para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_calcom
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -9798,7 +9798,7 @@ while true; do
     ## Pergunta o usuario da ferramenta
     echo -e "\e[97mPasso$amarelo 2/4\e[0m"
     echo -e "$amarelo--> Sem caracteres especiais: \!#$ e/ou espaços"
-    echo -en "\e[33mDigite um usuario (ex: OrionDesign): \e[0m" && read -r user_mautic
+    echo -en "\e[33mDigite um usuario (ex: CloudBR): \e[0m" && read -r user_mautic
     echo ""
 
     ## Pergunta o email da ferramenta
@@ -10617,7 +10617,7 @@ while true; do
     ## Pergunta o nome do Usuario do Motor
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
     echo -e "$amarelo--> Evite os caracteres especiais: @\!#$ e/ou espaço"
-    echo -en "\e[33mDigite o User do MOTOR (ex: oriondesign): \e[0m" && read -r email_admin_woofed
+    echo -en "\e[33mDigite o User do MOTOR (ex: CloudBR): \e[0m" && read -r email_admin_woofed
     echo ""
 
     ## Pergunta o nome do Senha do Motor
@@ -11108,7 +11108,7 @@ while true; do
     ## Pergunta o User SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario do SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_formbricks
+    echo -en "\e[33mDigite o Usuario do SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_formbricks
     echo ""
     
     ## Pergunta a Senha SMTP
@@ -12853,7 +12853,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_chatwoot
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_chatwoot
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -13845,7 +13845,7 @@ services:
 ## --------------------------- ORION --------------------------- ##
 
   n8n_quepasa_editor:
-    image: oriondesign/n8n-quepasa:latest ## Versão do N8N
+    image: CloudBR/n8n-quepasa:latest ## Versão do N8N
     command: start
 
     volumes:
@@ -13941,7 +13941,7 @@ services:
 ## --------------------------- ORION --------------------------- ##
 
   n8n_quepasa_webhook:
-    image: oriondesign/n8n-quepasa:latest ## Versão do N8N
+    image: CloudBR/n8n-quepasa:latest ## Versão do N8N
     command: webhook
 
     volumes:
@@ -14037,7 +14037,7 @@ services:
 ## --------------------------- ORION --------------------------- ##
 
   n8n_quepasa_worker:
-    image: oriondesign/n8n-quepasa:latest ## Versão do N8N
+    image: CloudBR/n8n-quepasa:latest ## Versão do N8N
     command: worker --concurrency=10
 
     volumes:
@@ -14317,7 +14317,7 @@ services:
         - QUEPASA_BASIC_AUTH_PASSWORD=$email_quepasa
 
         ## Titulo no celular
-        - APP_TITLE=OrionDesign ## Mude aqui o nome que vai aparecer no celular.
+        - APP_TITLE=CloudBR ## Mude aqui o nome que vai aparecer no celular.
 
         ## TimeZone
         - TZ=America/Sao_Paulo
@@ -14527,7 +14527,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_email_dify
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_email_dify
     echo ""
 
     ## Pergunta a senha do SMTP
@@ -15758,7 +15758,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_docuseal
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_docuseal
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -17686,7 +17686,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     #echo -e "\e[97mPasso$amarelo 4/4\e[0m"
-    #echo -en "\e[33mDigite o Usuario MySQL  (ex: oriondesign): \e[0m" && read -r user_phpmyadmin
+    #echo -en "\e[33mDigite o Usuario MySQL  (ex: CloudBR): \e[0m" && read -r user_phpmyadmin
     #echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -18015,7 +18015,7 @@ while true; do
 
     ##Pergunta o Dominio do Viewer
     echo -e "\e[97mPasso$amarelo 2/10\e[0m"
-    echo -en "\e[33mDigite o Usuario para o Supabase (ex: OrionDesign): \e[0m" && read -r user_supabase
+    echo -en "\e[33mDigite o Usuario para o Supabase (ex: CloudBR): \e[0m" && read -r user_supabase
     echo ""
 
     ##Pergunta a versão da ferramenta
@@ -18032,7 +18032,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 5/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_email_supabase
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_email_supabase
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -18285,7 +18285,7 @@ services:
       - POSTGRES_PASSWORD=$Senha_Postgres ## Senha do Postgres #OK
 
       ## Branding
-      - DEFAULT_ORGANIZATION_NAME=OrionDesign ## Nome da Empresa
+      - DEFAULT_ORGANIZATION_NAME=CloudBR ## Nome da Empresa
       - DEFAULT_PROJECT_NAME=SetupFlow ## Nome do Projeto
 
       ## Urls
@@ -18935,7 +18935,7 @@ while true; do
 
     ##Pergunta o Dominio para aplicação
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-    echo -en "\e[33mDigite o Usuario (ex: oriondesign): \e[0m" && read -r user_ntfy
+    echo -en "\e[33mDigite o Usuario (ex: CloudBR): \e[0m" && read -r user_ntfy
     echo ""
 
     ##Pergunta o Dominio para aplicação
@@ -19179,7 +19179,7 @@ while true; do
 
     ##Pergunta o Dominio para aplicação
     echo -e "\e[97mPasso$amarelo 2/8\e[0m"
-    echo -en "\e[33mDigite o User do MongoDB (ex: oriondesign): \e[0m" && read -r user_mongodb_lowcoder
+    echo -en "\e[33mDigite o User do MongoDB (ex: CloudBR): \e[0m" && read -r user_mongodb_lowcoder
     echo ""
 
     ##Pergunta o Dominio para aplicação
@@ -19195,7 +19195,7 @@ while true; do
     ## Pergunta o Ususario SMTP
     echo -e "\e[97mPasso$amarelo 5/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_lowcoder
+    echo -en "\e[33mDigite o Usuario para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_lowcoder
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -19588,7 +19588,7 @@ while true; do
     ## Pergunta o usuario da ferramenta
     echo -e "\e[97mPasso$amarelo 3/10\e[0m"
     echo -e "$amarelo--> Sem caracteres especiais: \!#$ e/ou espaços"
-    echo -en "\e[33mDigite um Usuario Admin (ex: OrionDesign): \e[0m" && read -r user_humhub
+    echo -en "\e[33mDigite um Usuario Admin (ex: CloudBR): \e[0m" && read -r user_humhub
     echo ""
 
     ## Pergunta o email da ferramenta
@@ -19610,7 +19610,7 @@ while true; do
     ## Pergunta o User SMTP
     echo -e "\e[97mPasso$amarelo 7/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario do SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_humhub
+    echo -en "\e[33mDigite o Usuario do SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_humhub
     echo ""
     
     ## Pergunta a Senha SMTP
@@ -20769,7 +20769,7 @@ while true; do
     
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-    echo -en "\e[33mDigite o Usuario (ex: oriondesign): \e[0m" && read -r user_yourls
+    echo -en "\e[33mDigite o Usuario (ex: CloudBR): \e[0m" && read -r user_yourls
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -21011,7 +21011,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r user_smtp_twentycrm
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r user_smtp_twentycrm
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -23099,7 +23099,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_email_documenso
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_email_documenso
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -23461,12 +23461,12 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 2/10\e[0m"
-    echo -en "\e[33mDigite o nome para o projeto (ex: OrionDesign): \e[0m" && read -r project_name_moodle
+    echo -en "\e[33mDigite o nome para o projeto (ex: CloudBR): \e[0m" && read -r project_name_moodle
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 3/10\e[0m"
-    echo -en "\e[33mDigite um Nome de Usuario (ex: oriondesign): \e[0m" && read -r user_moodle
+    echo -en "\e[33mDigite um Nome de Usuario (ex: CloudBR): \e[0m" && read -r user_moodle
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -23489,7 +23489,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 7/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_moodle
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_moodle
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -23836,7 +23836,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_tooljet
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: CloudBR ou contato@cloudbr.app): \e[0m" && read -r usuario_smtp_tooljet
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -24180,7 +24180,7 @@ requisitar_outra_instalacao
 ## Ignore esta parte, só para facilitar minha identificação com esta parte "XXOOXX"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Comandos extras
@@ -24704,7 +24704,7 @@ quepasa.setup.on(){
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Iniciando instalador
@@ -25907,7 +25907,7 @@ while true; do
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
         mysql)
@@ -25968,7 +25968,7 @@ while true; do
             
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
         
         evolution.v1)
@@ -26010,7 +26010,7 @@ while true; do
             ;;
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
         ## Reiniciar portainer
@@ -26074,7 +26074,7 @@ while true; do
             ;;
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         SETUP CLOUD                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 
