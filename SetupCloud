@@ -8223,7 +8223,7 @@ while true; do
     ##Pergunta o nome do site
     echo -e "\e[97mPasso$amarelo 2/2\e[0m"
     echo -e "$amarelo--> Use apenas letras minusculas, sem espaço ou caracteres especiais"
-    echo -en "\e[33mDigite o nome do Site (ex: lojaorion): \e[0m" && read -r nome_site_wordpress
+    echo -en "\e[33mDigite o nome do Site (ex: lojacloud): \e[0m" && read -r nome_site_wordpress
     echo ""
     
     ##Trata informações
@@ -16773,7 +16773,7 @@ cd blablabla
 
 git clone https://github.com/josemaeldon/SetupFlow.git > /dev/null 2>&1
 
-sudo mv /root/blablabla/SetupFlow/Extras/Grafana/monitor-orion /opt
+sudo mv /root/blablabla/SetupFlow/Extras/Grafana/monitor-cloud /opt
 
 cd
 
@@ -16802,7 +16802,7 @@ else
 fi
 
 
-cp /root/datasource.yml /opt/monitor-orion/grafana/
+cp /root/datasource.yml /opt/monitor-cloud/grafana/
 if [ $? -eq 0 ]; then
     echo "2/6 - [ OK ]"
 else
@@ -16810,7 +16810,7 @@ else
     echo "Não foi possivel copiar o datasource para o diretório opt"
 fi
 
-cp /root/datasource.yml /opt/monitor-orion/grafana/provisioning/datasources/
+cp /root/datasource.yml /opt/monitor-cloud/grafana/provisioning/datasources/
 if [ $? -eq 0 ]; then
     echo "3/6 - [ OK ]"
 else
@@ -16859,7 +16859,7 @@ else
     echo "Não foi possivel criar o prometheus"
 fi
 
-mv /root/prometheus.yml /opt/monitor-orion/prometheus/
+mv /root/prometheus.yml /opt/monitor-cloud/prometheus/
 if [ $? -eq 0 ]; then
     echo "6/6 - [ OK ]"
 else
@@ -16889,7 +16889,7 @@ services:
     image: prom/prometheus:latest
 
     volumes:
-      - /opt/monitor-orion/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /opt/monitor-cloud/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
 
     networks:
       - $nome_rede_interna
@@ -16918,10 +16918,10 @@ services:
     image: grafana/grafana:latest
 
     volumes:
-      - /opt/monitor-orion/grafana/grafana.ini:/etc/grafana/grafana.ini
-      - /opt/monitor-orion/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
-      - /opt/monitor-orion/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
-      - /opt/monitor-orion/grafana/dashboards:/etc/grafana/dashboards
+      - /opt/monitor-cloud/grafana/grafana.ini:/etc/grafana/grafana.ini
+      - /opt/monitor-cloud/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - /opt/monitor-cloud/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - /opt/monitor-cloud/grafana/dashboards:/etc/grafana/dashboards
 
     networks:
       - $nome_rede_interna
@@ -17128,7 +17128,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-    echo -en "\e[33mDigite o Usuario para o NextCloud (ex: orion): \e[0m" && read -r user_nextcloud
+    echo -en "\e[33mDigite o Usuario para o NextCloud (ex: cloud): \e[0m" && read -r user_nextcloud
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -23649,9 +23649,9 @@ services:
       ## Dados MarinaDB
       - MOODLE_DATABASE_HOST=moodle_mariadb
       - MOODLE_DATABASE_PORT_NUMBER=3306
-      - MOODLE_DATABASE_USER=orion_moodle
+      - MOODLE_DATABASE_USER=cloud_moodle
       - MOODLE_DATABASE_PASSWORD=$senha_marinadb
-      - MOODLE_DATABASE_NAME=orionbase_moodle
+      - MOODLE_DATABASE_NAME=cloudbase_moodle
       - ALLOW_EMPTY_PASSWORD=no
 
     deploy:
@@ -23686,9 +23686,9 @@ services:
 
     environment:  
       ## Dados MarinaDB
-      - MARIADB_USER=orion_moodle
+      - MARIADB_USER=cloud_moodle
       - MARIADB_ROOT_PASSWORD=$senha_marinadb
-      - MARIADB_DATABASE=orionbase_moodle
+      - MARIADB_DATABASE=cloudbase_moodle
       - MARIADB_PASSWORD=$senha_marinadb
       - MARIADB_CHARACTER_SET=utf8mb4
       - MARIADB_COLLATE=utf8mb4_unicode_ci
