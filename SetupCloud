@@ -1758,7 +1758,7 @@ verificar_token() {
                 atualizar_arquivo
             fi
 
-            $APP_ORION
+            $APP_cloud
 
             break
         else
@@ -10739,7 +10739,7 @@ services:
 
 ## --------------------------- STACK --------------------------- ##
 
-  woofedcrm_web_orion:
+  woofedcrm_web_cloud:
     image: douglara/woofedcrm:latest
     command: bundle exec rails s -p 3000 -b 0.0.0.0
 
@@ -10813,7 +10813,7 @@ services:
 
 ## --------------------------- STACK --------------------------- ##
 
-  woofedcrm_sidekiq_orion:
+  woofedcrm_sidekiq_cloud:
     image: douglara/woofedcrm:latest
     command: bundle exec sidekiq -C config/sidekiq.yml
 
@@ -10876,7 +10876,7 @@ services:
 
 ## --------------------------- STACK --------------------------- ##
 
-  woofedcrm_job_orion:
+  woofedcrm_job_cloud:
     image: douglara/woofedcrm:latest
     command: bundle exec good_job
 
@@ -10979,7 +10979,7 @@ echo ""
 sleep 1
 
 #MIGRANDO BANCO DE DADOS DO WOOFED CRM
-container_name="woofedcrm_web_orion"
+container_name="woofedcrm_web_cloud"
 
 max_wait_time=1200
 
@@ -12557,7 +12557,7 @@ services:
     entrypoint: docker/entrypoints/rails.sh
     volumes:
       - chatwoot_uno_data:/app/storage ## Diretório dos arquivos de conversa
-      - chatwoot_uno_public_orion:/app ## Diretório de todos os arquivos do chatwoot
+      - chatwoot_uno_public_cloud:/app ## Diretório de todos os arquivos do chatwoot
     networks:
       - $nome_rede_interna ## Nome da rede interna
     environment:
@@ -12617,7 +12617,7 @@ services:
     command: bundle exec sidekiq -C config/sidekiq.yml
     volumes:
       - chatwoot_uno_data:/app/storage ## Diretório dos arquivos de conversa
-      - chatwoot_uno_public_orion:/app ## Diretório de todos os arquivos do chatwoot
+      - chatwoot_uno_public_cloud:/app ## Diretório de todos os arquivos do chatwoot
     networks:
       - $nome_rede_interna ## Nome da rede interna
     environment:
@@ -12665,9 +12665,9 @@ volumes:
   chatwoot_uno_data:
     external: true
     name: chatwoot_uno_data
-  chatwoot_uno_public_orion:
+  chatwoot_uno_public_cloud:
     external: true
-    name: chatwoot_uno_public_orion
+    name: chatwoot_uno_public_cloud
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -24468,17 +24468,17 @@ while true; do
 
             # Baixando workflows
 
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootExtra.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootProfileUpdate.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootToQuepasa.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/GetChatwootContacts.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToChatwoot.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToWebCallBack.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaAutomatic.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaChatControl.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaQrcode.json"
-            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaToChatwoot.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/ChatwootExtra.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/ChatwootProfileUpdate.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/ChatwootToQuepasa.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/GetChatwootContacts.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/PostToChatwoot.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/PostToWebCallBack.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/QuepasaAutomatic.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/QuepasaChatControl.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/QuepasaInboxControl.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/QuepasaQrcode.json"
+            wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_cloud/main/workflows/latest/QuepasaToChatwoot.json"
 
             # Subindo workflows
             n8n import:workflow --input="$temp_dir" --separate
@@ -24743,7 +24743,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_chatwoot
                 else
-                    APP_ORION="ferramenta_chatwoot"
+                    APP_cloud="ferramenta_chatwoot"
                     verificar_arquivo
                 fi
 
@@ -24766,7 +24766,7 @@ while true; do
                 #    ## Se não tiver Token no dados_portainer
                 #    else
                 #        ## Nome da Stack
-                #        APP_ORION="ferramenta_chatwoot"
+                #        APP_cloud="ferramenta_chatwoot"
                 #
                 #        ## Verifica o arquivo dados_portainer e pede dados
                 #        verificar_arquivo
@@ -24781,7 +24781,7 @@ while true; do
                 #    ## Se não tiver Token no dados_portainer
                 #    else
                 #        ## Nome da Stack
-                #        APP_ORION="ferramenta_chatwoot_arm"
+                #        APP_cloud="ferramenta_chatwoot_arm"
                 #
                 #        ## Verifica o arquivo dados_portainer e pede dados
                 #        verificar_arquivo
@@ -24810,7 +24810,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_chatwoot_arm
                 else
-                    APP_ORION="ferramenta_chatwoot_arm"
+                    APP_cloud="ferramenta_chatwoot_arm"
                     verificar_arquivo
                 fi
         
@@ -24830,7 +24830,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_evolution
                 else
-                    APP_ORION="ferramenta_evolution"
+                    APP_cloud="ferramenta_evolution"
                     verificar_arquivo
                 fi
 
@@ -24849,7 +24849,7 @@ while true; do
         #       if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
         #           ferramenta_evolution_arm
         #       else
-        #           APP_ORION="ferramenta_evolution_arm"
+        #           APP_cloud="ferramenta_evolution_arm"
         #           verificar_arquivo
         #       fi
 
@@ -24867,7 +24867,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_minio
                 else
-                    APP_ORION="ferramenta_minio"
+                    APP_cloud="ferramenta_minio"
                     verificar_arquivo
                 fi
 
@@ -24886,7 +24886,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_typebot
                 else
-                    APP_ORION="ferramenta_typebot"
+                    APP_cloud="ferramenta_typebot"
                     verificar_arquivo
                 fi
 
@@ -24904,7 +24904,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_n8n
                 else
-                    APP_ORION="ferramenta_n8n"
+                    APP_cloud="ferramenta_n8n"
                     verificar_arquivo
                 fi
 
@@ -24923,7 +24923,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_flowise
                 else
-                    APP_ORION="ferramenta_flowise"
+                    APP_cloud="ferramenta_flowise"
                     verificar_arquivo
                 fi
 
@@ -24941,7 +24941,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_pgAdmin_4
                 else
-                    APP_ORION="ferramenta_pgAdmin_4"
+                    APP_cloud="ferramenta_pgAdmin_4"
                     verificar_arquivo
                 fi
 
@@ -24960,7 +24960,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_nocobase
                 else
-                    APP_ORION="ferramenta_nocobase"
+                    APP_cloud="ferramenta_nocobase"
                     verificar_arquivo
                 fi
 
@@ -24979,7 +24979,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_botpress
                 else
-                    APP_ORION="ferramenta_botpress"
+                    APP_cloud="ferramenta_botpress"
                     verificar_arquivo
                 fi
 
@@ -24996,7 +24996,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_wordpress
                 else
-                    APP_ORION="ferramenta_wordpress"
+                    APP_cloud="ferramenta_wordpress"
                     verificar_arquivo
                 fi
 
@@ -25014,7 +25014,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_baserow
                 else
-                    APP_ORION="ferramenta_baserow"
+                    APP_cloud="ferramenta_baserow"
                     verificar_arquivo
                 fi
 
@@ -25033,7 +25033,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_mongodb
                 else
-                    APP_ORION="ferramenta_mongodb"
+                    APP_cloud="ferramenta_mongodb"
                     verificar_arquivo
                 fi
 
@@ -25052,7 +25052,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_rabbitmq
                 else
-                    APP_ORION="ferramenta_rabbitmq"
+                    APP_cloud="ferramenta_rabbitmq"
                     verificar_arquivo
                 fi
 
@@ -25071,7 +25071,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_uptimekuma
                 else
-                    APP_ORION="ferramenta_uptimekuma"
+                    APP_cloud="ferramenta_uptimekuma"
                     verificar_arquivo
                 fi
 
@@ -25090,7 +25090,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_calcom
                 else
-                    APP_ORION="ferramenta_calcom"
+                    APP_cloud="ferramenta_calcom"
                     verificar_arquivo
                 fi
 
@@ -25109,7 +25109,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_mautic
                 else
-                    APP_ORION="ferramenta_mautic"
+                    APP_cloud="ferramenta_mautic"
                     verificar_arquivo
                 fi
 
@@ -25128,7 +25128,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_appsmith
                 else
-                    APP_ORION="ferramenta_appsmith"
+                    APP_cloud="ferramenta_appsmith"
                     verificar_arquivo
                 fi
 
@@ -25147,7 +25147,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_qdrant
                 else
-                    APP_ORION="ferramenta_qdrant"
+                    APP_cloud="ferramenta_qdrant"
                     verificar_arquivo
                 fi
 
@@ -25166,7 +25166,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_woofed
                 else
-                    APP_ORION="ferramenta_woofed"
+                    APP_cloud="ferramenta_woofed"
                     verificar_arquivo
                 fi
 
@@ -25185,7 +25185,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_formbricks
                 else
-                    APP_ORION="ferramenta_formbricks"
+                    APP_cloud="ferramenta_formbricks"
                     verificar_arquivo
                 fi
 
@@ -25204,7 +25204,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_nocodb
                 else
-                    APP_ORION="ferramenta_nocodb"
+                    APP_cloud="ferramenta_nocodb"
                     verificar_arquivo
                 fi
 
@@ -25223,7 +25223,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_langfuse
                 else
-                    APP_ORION="ferramenta_langfuse"
+                    APP_cloud="ferramenta_langfuse"
                     verificar_arquivo
                 fi
 
@@ -25242,7 +25242,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_metabase
                 else
-                    APP_ORION="ferramenta_metabase"
+                    APP_cloud="ferramenta_metabase"
                     verificar_arquivo
                 fi
 
@@ -25261,7 +25261,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_odoo
                 else
-                    APP_ORION="ferramenta_odoo"
+                    APP_cloud="ferramenta_odoo"
                     verificar_arquivo
                 fi
 
@@ -25280,7 +25280,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_chatwoot_nestor
                 else
-                    APP_ORION="ferramenta_chatwoot_nestor"
+                    APP_cloud="ferramenta_chatwoot_nestor"
                     verificar_arquivo
                 fi
 
@@ -25299,7 +25299,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_unoapi
                 else
-                    APP_ORION="ferramenta_unoapi"
+                    APP_cloud="ferramenta_unoapi"
                     verificar_arquivo
                 fi
 
@@ -25318,7 +25318,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_n8n_quepasa
                 else
-                    APP_ORION="ferramenta_n8n_quepasa"
+                    APP_cloud="ferramenta_n8n_quepasa"
                     verificar_arquivo
                 fi
 
@@ -25337,7 +25337,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_quepasa
                 else
-                    APP_ORION="ferramenta_quepasa"
+                    APP_cloud="ferramenta_quepasa"
                     verificar_arquivo
                 fi
 
@@ -25356,7 +25356,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_docuseal
                 else
-                    APP_ORION="ferramenta_docuseal"
+                    APP_cloud="ferramenta_docuseal"
                     verificar_arquivo
                 fi
 
@@ -25375,7 +25375,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_monitor
                 else
-                    APP_ORION="ferramenta_monitor"
+                    APP_cloud="ferramenta_monitor"
                     verificar_arquivo
                 fi
 
@@ -25394,7 +25394,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_dify
                 else
-                    APP_ORION="ferramenta_dify"
+                    APP_cloud="ferramenta_dify"
                     verificar_arquivo
                 fi
 
@@ -25413,7 +25413,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_ollama
                 else
-                    APP_ORION="ferramenta_ollama"
+                    APP_cloud="ferramenta_ollama"
                     verificar_arquivo
                 fi
 
@@ -25432,7 +25432,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_affine
                 else
-                    APP_ORION="ferramenta_affine"
+                    APP_cloud="ferramenta_affine"
                     verificar_arquivo
                 fi
 
@@ -25451,7 +25451,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_directus
                 else
-                    APP_ORION="ferramenta_directus"
+                    APP_cloud="ferramenta_directus"
                     verificar_arquivo
                 fi
 
@@ -25470,7 +25470,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_vaultwarden
                 else
-                    APP_ORION="ferramenta_vaultwarden"
+                    APP_cloud="ferramenta_vaultwarden"
                     verificar_arquivo
                 fi
 
@@ -25489,7 +25489,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_nextcloud
                 else
-                    APP_ORION="ferramenta_nextcloud"
+                    APP_cloud="ferramenta_nextcloud"
                     verificar_arquivo
                 fi
 
@@ -25507,7 +25507,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_strapi
                 else
-                    APP_ORION="ferramenta_strapi"
+                    APP_cloud="ferramenta_strapi"
                     verificar_arquivo
                 fi
 
@@ -25526,7 +25526,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_phpmyadmin
                 else
-                    APP_ORION="ferramenta_phpmyadmin"
+                    APP_cloud="ferramenta_phpmyadmin"
                     verificar_arquivo
                 fi
 
@@ -25545,7 +25545,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_supabase
                 else
-                    APP_ORION="ferramenta_supabase"
+                    APP_cloud="ferramenta_supabase"
                     verificar_arquivo
                 fi
 
@@ -25564,7 +25564,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_ntfy
                 else
-                    APP_ORION="ferramenta_ntfy"
+                    APP_cloud="ferramenta_ntfy"
                     verificar_arquivo
                 fi
 
@@ -25582,7 +25582,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_lowcoder
                 else
-                    APP_ORION="ferramenta_lowcoder"
+                    APP_cloud="ferramenta_lowcoder"
                     verificar_arquivo
                 fi
 
@@ -25600,7 +25600,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_langflow
                 else
-                    APP_ORION="ferramenta_langflow"
+                    APP_cloud="ferramenta_langflow"
                     ferramenta_langflow
                 fi
 
@@ -25618,7 +25618,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_openproject
                 else
-                    APP_ORION="ferramenta_openproject"
+                    APP_cloud="ferramenta_openproject"
                     ferramenta_openproject
                 fi
 
@@ -25636,7 +25636,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_zep
                 else
-                    APP_ORION="ferramenta_zep"
+                    APP_cloud="ferramenta_zep"
                     ferramenta_zep
                 fi
 
@@ -25654,7 +25654,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_humhub
                 else
-                    APP_ORION="ferramenta_humhub"
+                    APP_cloud="ferramenta_humhub"
                     ferramenta_humhub
                 fi
 
@@ -25672,7 +25672,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_yourls
                 else
-                    APP_ORION="ferramenta_yourls"
+                    APP_cloud="ferramenta_yourls"
                     ferramenta_yourls
                 fi
 
@@ -25691,7 +25691,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_twentycrm
                 else
-                    APP_ORION="ferramenta_twentycrm"
+                    APP_cloud="ferramenta_twentycrm"
                     ferramenta_twentycrm
                 fi
 
@@ -25710,7 +25710,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_mattermost
                 else
-                    APP_ORION="ferramenta_mattermost"
+                    APP_cloud="ferramenta_mattermost"
                     ferramenta_mattermost
                 fi
 
@@ -25729,7 +25729,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_outline
                 else
-                    APP_ORION="ferramenta_outline"
+                    APP_cloud="ferramenta_outline"
                     ferramenta_outline
                 fi
 
@@ -25748,7 +25748,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_focalboard
                 else
-                    APP_ORION="ferramenta_focalboard"
+                    APP_cloud="ferramenta_focalboard"
                     ferramenta_focalboard
                 fi
 
@@ -25767,7 +25767,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_glpi
                 else
-                    APP_ORION="ferramenta_glpi"
+                    APP_cloud="ferramenta_glpi"
                     ferramenta_glpi
                 fi
 
@@ -25786,7 +25786,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_anythingllm
                 else
-                    APP_ORION="ferramenta_anythingllm"
+                    APP_cloud="ferramenta_anythingllm"
                     ferramenta_anythingllm
                 fi
 
@@ -25805,7 +25805,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_excalidraw
                 else
-                    APP_ORION="ferramenta_excalidraw"
+                    APP_cloud="ferramenta_excalidraw"
                     ferramenta_excalidraw
                 fi
 
@@ -25824,7 +25824,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_easyappointments
                 else
-                    APP_ORION="ferramenta_easyappointments"
+                    APP_cloud="ferramenta_easyappointments"
                     ferramenta_easyappointments
                 fi
 
@@ -25843,7 +25843,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_documenso
                 else
-                    APP_ORION="ferramenta_documenso"
+                    APP_cloud="ferramenta_documenso"
                     ferramenta_documenso
                 fi
 
@@ -25862,7 +25862,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_moodle
                 else
-                    APP_ORION="ferramenta_moodle"
+                    APP_cloud="ferramenta_moodle"
                     ferramenta_moodle
                 fi
 
@@ -25881,7 +25881,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_tooljet
                 else
-                    APP_ORION="ferramenta_tooljet"
+                    APP_cloud="ferramenta_tooljet"
                     ferramenta_tooljet
                 fi
 
@@ -25920,7 +25920,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_mysql_setup
                 else
-                    APP_ORION="ferramenta_mysql_setup"
+                    APP_cloud="ferramenta_mysql_setup"
                     ferramenta_mysql_setup
                 fi
 
@@ -25939,7 +25939,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_redis_setup
                 else
-                    APP_ORION="ferramenta_redis_setup"
+                    APP_cloud="ferramenta_redis_setup"
                     ferramenta_redis_setup
                 fi
 
@@ -25957,7 +25957,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_pgvector_setup
                 else
-                    APP_ORION="ferramenta_pgvector_setup"
+                    APP_cloud="ferramenta_pgvector_setup"
                     ferramenta_pgvector_setup
                 fi
 
@@ -25981,7 +25981,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_evolution_v1
                 else
-                    APP_ORION="ferramenta_evolution_v1"
+                    APP_cloud="ferramenta_evolution_v1"
                     ferramenta_evolution_v1
                 fi
 
@@ -26000,7 +26000,7 @@ while true; do
                 if grep -q "Token: .\+" /root/dados_vps/dados_portainer; then
                     ferramenta_evolution_v2
                 else
-                    APP_ORION="ferramenta_evolution_v2"
+                    APP_cloud="ferramenta_evolution_v2"
                     ferramenta_evolution_v2
                 fi
 
