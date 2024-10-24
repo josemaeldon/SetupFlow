@@ -2793,7 +2793,7 @@ cat > traefik.yaml << EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   traefik:
     image: traefik:v2.11.2
@@ -2843,7 +2843,7 @@ services:
     networks:
       - $nome_rede_interna ## Nome da rede interna
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   vol_shared:
@@ -2901,7 +2901,7 @@ cat > portainer.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   agent:
     image: portainer/agent:latest ## Versão do portainer
@@ -2918,7 +2918,7 @@ services:
       placement:
         constraints: [node.platform.os == linux]
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   portainer:
     image: portainer/portainer-ce:latest
@@ -2946,7 +2946,7 @@ services:
         - "traefik.http.routers.portainer.entrypoints=websecure"
         - "traefik.http.routers.portainer.priority=1"
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -3053,7 +3053,7 @@ cat > postgres.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   postgres:
     image: postgres:14 ## Versão do postgres
@@ -3084,7 +3084,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   postgres_data:
@@ -3154,7 +3154,7 @@ cat > pgvector.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   pgvector:
     image: pgvector/pgvector:pg16
@@ -3182,7 +3182,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   pgvector:
@@ -3252,7 +3252,7 @@ cat > pgvector.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   pgvector:
     image: pgvector/pgvector:pg16
@@ -3280,7 +3280,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   pgvector:
@@ -3375,7 +3375,7 @@ cat > redis.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   redis:
     image: redis:latest  ## Versão do Redis
@@ -3404,7 +3404,7 @@ services:
           cpus: "1"
           memory: 2048M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   redis_data:
@@ -3469,7 +3469,7 @@ cat > redis.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   redis:
     image: redis:latest  ## Versão do Redis
@@ -3498,7 +3498,7 @@ services:
           cpus: "1"
           memory: 2048M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   redis_data:
@@ -3597,7 +3597,7 @@ cat > mysql.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mysql:
     image: percona/percona-server:8.0 ## Versão do Mysql
@@ -3631,7 +3631,7 @@ services:
         "--max-allowed-packet=512MB",
       ]
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   mysql_data:
@@ -3703,7 +3703,7 @@ cat > mysql.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mysql:
     image: percona/percona-server:8.0 ## Versão do Mysql
@@ -3737,7 +3737,7 @@ services:
         "--max-allowed-packet=512MB",
       ]
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   mysql_data:
@@ -4015,7 +4015,7 @@ cat > chatwoot.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_app:
     image: chatwoot/chatwoot:latest ## Versão do Chatwoot
@@ -4115,7 +4115,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.chatwoot_app.middlewares=sslheader@docker
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_sidekiq:
     image: chatwoot/chatwoot:latest ## Versão do Chatwoot
@@ -4203,7 +4203,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   chatwoot_storage:
@@ -4552,7 +4552,7 @@ cat > chatwoot.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_app:
     image: sendingtk/chatwoot-arm:latest ## Versão do Chatwoot
@@ -4651,7 +4651,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.chatwoot_app.middlewares=sslheader@docker
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_sidekiq:
     image: sendingtk/chatwoot-arm:latest ## Versão do Chatwoot
@@ -4738,7 +4738,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   chatwoot_storage:
@@ -5029,7 +5029,7 @@ cat > evolution.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   evolution:
     image: atendai/evolution-api:v2.1.0
@@ -5207,7 +5207,7 @@ services:
       - traefik.http.services.evolution.loadbalancer.server.port=8080
       - traefik.http.services.evolution.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   evolution_instances:
@@ -5397,7 +5397,7 @@ cat > evolution_v1.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   evolution_cloudbr:
     image: atendai/evolution-api:latest ## Versão da Evolution API
@@ -5527,7 +5527,7 @@ services:
       - traefik.http.services.evolution_cloudbr.loadbalancer.server.port=8080
       - traefik.http.services.evolution_cloudbr.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   evolution_cloudbr_instances:
@@ -5756,7 +5756,7 @@ cat > evolution_v2.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   evolution:
     image: atendai/evolution-api:v2.1.0
@@ -5934,7 +5934,7 @@ services:
       - traefik.http.services.evolution.loadbalancer.server.port=8080
       - traefik.http.services.evolution.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   evolution_instances:
@@ -6136,7 +6136,7 @@ cat > minio.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   minio:
     image: quay.io/minio/minio:RELEASE.2024-01-13T07-53-03Z-cpuv1 ## Versão do Minio
@@ -6178,7 +6178,7 @@ services:
         - traefik.http.services.minio_console.loadbalancer.passHostHeader=true
         - traefik.http.routers.minio_console.service=minio_console
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   minio_data:
@@ -6494,7 +6494,7 @@ cat > typebot.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   typebot_builder:
     image: baptistearno/typebot-builder:$versao_typebot ## Versão do Typebot
@@ -6561,7 +6561,7 @@ services:
         - traefik.http.services.typebot_builder.loadbalancer.passHostHeader=true
         - traefik.http.routers.typebot_builder.service=typebot_builder
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   typebot_viewer:
     image: baptistearno/typebot-viewer:$versao_typebot ## Versão do Typebot
@@ -6628,7 +6628,7 @@ services:
         - traefik.http.services.typebot_viewer.loadbalancer.passHostHeader=true
         - traefik.http.routers.typebot_viewer.service=typebot_viewer
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -6888,7 +6888,7 @@ cat > n8n.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_editor:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -6966,7 +6966,7 @@ services:
         - traefik.http.services.n8n_editor.loadbalancer.server.port=5678
         - traefik.http.services.n8n_editor.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_webhook:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -7045,7 +7045,7 @@ services:
         - traefik.http.services.n8n_webhook.loadbalancer.server.port=5678
         - traefik.http.services.n8n_webhook.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_worker:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -7115,7 +7115,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -7323,7 +7323,7 @@ cat > flowise.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   flowise:
     image: flowiseai/flowise:latest ## Versão do Flowise
@@ -7369,7 +7369,7 @@ services:
         - traefik.http.routers.flowise.entrypoints=websecure
         - traefik.http.routers.flowise.tls.certresolver=letsencryptresolver
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   flowise_data:
@@ -7555,7 +7555,7 @@ cat > pgadmin.yaml <<EOL
 version: "3.7"
 services:  
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   pgadmin:
     image: dpage/pgadmin4:latest ## Versão do PgAdmin 4
@@ -7599,7 +7599,7 @@ services:
           - traefik.http.routers.pgadmin.entrypoints=websecure
           - traefik.http.routers.pgadmin.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -7817,7 +7817,7 @@ cat > nocobase.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   nocobase:
     image: nocobase/nocobase:0.19.0-alpha.7 ## Versão do Nocobase
@@ -7872,7 +7872,7 @@ services:
         - traefik.http.routers.nocobase.entrypoints=websecure
         - traefik.http.routers.nocobase.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   nocobase_storage:
@@ -8066,7 +8066,7 @@ cat > botpress.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   botpress:
     image: botpress/server:latest
@@ -8109,7 +8109,7 @@ services:
         - traefik.http.routers.botpress.entrypoints=websecure
         - traefik.http.routers.botpress.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   botpress_data:
@@ -8345,7 +8345,7 @@ cat > $nome_da_stack_wordpress <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   $nome_do_servico_wordpress:
     image: wordpress:latest ## Versão do Wordpress
@@ -8390,7 +8390,7 @@ services:
         - traefik.http.services.$nome_do_servico_wordpress.loadbalancer.server.port=80
         - traefik.http.services.$nome_do_servico_wordpress.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   $nome_da_date_wordpress:
@@ -8675,7 +8675,7 @@ cat > baserow.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   baserow:
     image: baserow/baserow:latest ## Versão do Baserow
@@ -8727,7 +8727,7 @@ services:
         - traefik.http.routers.baserow.entrypoints=websecure
         - traefik.http.routers.baserow.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -8907,7 +8907,7 @@ cat > mongodb.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mongodb:
     image: mongo:latest
@@ -8941,7 +8941,7 @@ services:
           cpus: '1'
           memory: 2048M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   mongodb_data:
@@ -9137,7 +9137,7 @@ cat > rabbitmq.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   rabbitmq:
     image: rabbitmq:management
@@ -9179,7 +9179,7 @@ services:
         - traefik.http.routers.rabbitmq.service=rabbitmq
         - traefik.http.services.rabbitmq.loadbalancer.server.port=15672
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   rabbitmq_data:
@@ -9350,7 +9350,7 @@ cat > uptimekuma.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   uptimekuma:
     image: louislam/uptime-kuma:latest
@@ -9381,7 +9381,7 @@ services:
         - traefik.http.services.uptimekuma.loadBalancer.server.port=3001
         - traefik.http.routers.uptimekuma.service=uptimekuma
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   uptimekuma:
@@ -9619,7 +9619,7 @@ cat > calcom.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   calcom:
     image: calcom/cal.com:v3.7.11
@@ -9690,7 +9690,7 @@ services:
       - traefik.http.services.calcom.loadbalancer.server.port=3000
       - traefik.http.services.calcom.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -9903,7 +9903,7 @@ cat > mautic.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mautic_web:
     image: mautic/mautic:5.0.4-apache ## Versão do Mautic
@@ -9958,7 +9958,7 @@ services:
         - traefik.http.routers.mautic.tls.certresolver=letsencryptresolver
         - traefik.http.services.mautic.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mautic_worker:
     image: mautic/mautic:5.0.4-apache ## Versão do Mautic
@@ -10004,7 +10004,7 @@ services:
           cpus: "2"
           memory: 2048M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mautic_cron:
     image: mautic/mautic:5.0.4-apache ## Versão do Mautic
@@ -10050,7 +10050,7 @@ services:
           cpus: "0.5"
           memory: 512M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   mautic_config:
@@ -10240,7 +10240,7 @@ cat > appsmith.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   appsmith:
     image: appsmith/appsmith-ee:latest
@@ -10277,7 +10277,7 @@ services:
         - traefik.http.services.appsmith.loadbalancer.server.port=80
         - traefik.http.services.appsmith.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   appsmith_data:
@@ -10464,7 +10464,7 @@ for ((i=0; i< $nodes_qdrant; i++)); do
 
   cat <<EOL >> qdrant.yaml
 
-  ## --------------------------- ORION --------------------------- ##
+  ## --------------------------- STACK --------------------------- ##
 
   $node_name:
     image: qdrant/qdrant:latest
@@ -10502,7 +10502,7 @@ EOL
 done
 
 cat <<EOL >> qdrant.yaml
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
 EOL
@@ -10737,7 +10737,7 @@ cat > woofedcrm.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   woofedcrm_web_orion:
     image: douglara/woofedcrm:latest
@@ -10811,7 +10811,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.woofedcrm.middlewares=sslheader@docker
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   woofedcrm_sidekiq_orion:
     image: douglara/woofedcrm:latest
@@ -10874,7 +10874,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   woofedcrm_job_orion:
     image: douglara/woofedcrm:latest
@@ -10937,7 +10937,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   woofedcrm_data:
@@ -11236,7 +11236,7 @@ cat > formbricks.yaml <<-EOF
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   formbricks:
     image: formbricks/formbricks:latest
@@ -11329,7 +11329,7 @@ services:
         - traefik.http.routers.formbricks.entrypoints=websecure
         - traefik.http.routers.formbricks.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -11516,7 +11516,7 @@ cat > nocodb.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   nocodb: 
     image: nocodb/nocodb:latest
@@ -11556,7 +11556,7 @@ services:
         - traefik.http.routers.nocodb.tls.certresolver=letsencryptresolver
         - com.centurylinklabs.watchtower.enable=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   nocodb-data:
@@ -11750,7 +11750,7 @@ cat > langfuse.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   langfuse:
     image: ghcr.io/langfuse/langfuse:latest
@@ -11800,7 +11800,7 @@ services:
         - traefik.http.services.langfuse.loadbalancer.passHostHeader=true
         - traefik.http.services.langfuse.loadbalancer.server.port=3000
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -11989,7 +11989,7 @@ cat > metabase.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   metabase:
     image: metabase/metabase:latest
@@ -12032,7 +12032,7 @@ services:
         - traefik.http.routers.metabase.tls=true
         - traefik.http.routers.metabase.tls.certresolver=letsencryptresolver
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   metabase_data:
@@ -12206,7 +12206,7 @@ cat > odoo.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   odoo_app:
     image: odoo:16.0
@@ -12237,7 +12237,7 @@ services:
         - traefik.http.routers.odoo.tls.certresolver=letsencryptresolver
         - traefik.http.services.odoo.loadbalancer.server.port=8069
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   odoo_db:
     image: postgres:15
@@ -12261,7 +12261,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   odoo_web_data1:
@@ -13015,7 +13015,7 @@ cat > chatwoot_nestor.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_app:
     image: sendingtk/chatwoot:latest ## Versão do Chatwoot
@@ -13115,7 +13115,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.chatwoot_app.middlewares=sslheader@docker
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   chatwoot_sidekiq:
     image: sendingtk/chatwoot:latest ## Versão do Chatwoot
@@ -13203,7 +13203,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   chatwoot_nestor_storage:
@@ -13530,7 +13530,7 @@ cat > unoapi.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   unoapi:
     image: clairton/unoapi-cloud:latest
@@ -13602,7 +13602,7 @@ services:
       - traefik.http.services.unoapi.loadbalancer.passHostHeader=true
       - traefik.http.routers.unoapi.service=unoapi
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   unoapi_data:
@@ -13842,7 +13842,7 @@ cat > n8n_quepasa.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_quepasa_editor:
     image: CloudBR/n8n-quepasa:latest ## Versão do N8N
@@ -13938,7 +13938,7 @@ services:
         - traefik.http.services.n8n_quepasa_editor.loadbalancer.server.port=5678
         - traefik.http.services.n8n_quepasa_editor.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_quepasa_webhook:
     image: CloudBR/n8n-quepasa:latest ## Versão do N8N
@@ -14034,7 +14034,7 @@ services:
         - traefik.http.services.n8n_quepasa_webhook.loadbalancer.server.port=5678
         - traefik.http.services.n8n_quepasa_webhook.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   n8n_quepasa_worker:
     image: CloudBR/n8n-quepasa:latest ## Versão do N8N
@@ -14110,7 +14110,7 @@ services:
       - GENERIC_TIMEZONE=America/Sao_Paulo
       - TZ=America/Sao_Paulo
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   n8n_quepasa_data:
@@ -14296,7 +14296,7 @@ cat > quepasa.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
     quepasa:
       image: deividms/quepasa:v3.24.517.1231 ## Imagem/versão do Quepasa
@@ -14393,7 +14393,7 @@ services:
         - traefik.http.services.quepasa.loadbalancer.server.port=31000
         - traefik.http.services.quepasa.loadbalancer.passHostHeader=true              
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   quepasa_volume:
@@ -14729,7 +14729,7 @@ cat > dify.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   api:
     image: langgenius/dify-api:latest ## Versão do Dify
@@ -14830,7 +14830,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   worker:
     image: langgenius/dify-api:latest ## Versão do Dify
@@ -14897,7 +14897,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ## 
+## --------------------------- STACK --------------------------- ## 
 
   web:
     image: langgenius/dify-web:latest ## Versão do Dify
@@ -14927,7 +14927,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   sandbox:
     image: langgenius/dify-sandbox:latest
@@ -14951,7 +14951,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   weaviate:
     image: semitechnologies/weaviate:latest ## Versão do Weaviate
@@ -14991,7 +14991,7 @@ services:
           cpus: "1"
           memory: 2048M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   nginx:
     image: nginx:latest ## Versão do nginx
@@ -15038,7 +15038,7 @@ services:
         - traefik.http.services.nginx.loadbalancer.passHostHeader=true
         - traefik.http.routers.nginx.service=nginx
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   dify_storage:
@@ -15220,7 +15220,7 @@ cat > ollama.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   ollama:
     image: ollama/ollama:latest
@@ -15253,7 +15253,7 @@ services:
         - traefik.http.services.ollama.loadbalancer.server.port=11434
         - traefik.http.services.ollama.loadbalancer.passHostHeader=1
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   ollamaweb:
     image: ghcr.io/ollama-webui/ollama-webui:main
@@ -15286,7 +15286,7 @@ services:
         - traefik.http.services.ollamaweb.loadbalancer.server.port=8080
         - traefik.http.services.ollamaweb.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   ollama_data:
@@ -15571,7 +15571,7 @@ cat > affine.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   affine:
     image: ghcr.io/toeverything/affine-graphql:stable-39476d1
@@ -15637,7 +15637,7 @@ services:
         - traefik.frontend.headers.STSPreload=true
         - traefik.frontend.headers.STSSeconds=31536000
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   affine_config:
@@ -15883,7 +15883,7 @@ cat > docuseal.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   docuseal:
     image: docuseal/docuseal:latest
@@ -15934,7 +15934,7 @@ services:
         - traefik.http.routers.docuseal.entrypoints=websecure
         - traefik.http.routers.docuseal.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   docuseal_data:
@@ -16241,7 +16241,7 @@ cat > directus.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   directus:
     image: directus/directus:latest
@@ -16306,7 +16306,7 @@ services:
         - traefik.http.services.directus.loadbalancer.server.port=8055
         - traefik.docker.network=proxy
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   directus_uploads:
@@ -16524,7 +16524,7 @@ cat > vaultwarden.yaml <<-EOF
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   vaultwarden:
     image: vaultwarden/server:latest
@@ -16575,7 +16575,7 @@ services:
         - "traefik.http.middlewares.compresstraefik.compress=true"
         - "traefik.docker.network=$nome_rede_interna"
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   vaultwarden-data:
@@ -16883,7 +16883,7 @@ cat > monitor.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   prometheus:
     image: prom/prometheus:latest
@@ -16912,7 +16912,7 @@ services:
         - traefik.http.routers.prometheus.entrypoints=websecure
         - traefik.http.routers.prometheus.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   grafana:
     image: grafana/grafana:latest
@@ -16946,7 +16946,7 @@ services:
         - traefik.http.routers.grafana.entrypoints=websecure
         - traefik.http.routers.grafana.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   node-exporter:
     image: prom/node-exporter:latest
@@ -16973,7 +16973,7 @@ services:
         - traefik.http.routers.node-exporter.entrypoints=websecure
         - traefik.http.routers.node-exporter.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   cadvisor:
     image: google/cadvisor:latest
@@ -17006,7 +17006,7 @@ services:
         - traefik.http.routers.cadvisor.entrypoints=websecure
         - traefik.http.routers.cadvisor.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -17244,7 +17244,7 @@ cat > nextcloud.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   nextcloud:
     image: nextcloud:latest
@@ -17295,7 +17295,7 @@ services:
         - traefik.http.middlewares.nextcloud_redirectregex.redirectregex.regex=https://(.*)/.well-known/(?:card|cal)dav
         - traefik.http.middlewares.nextcloud_redirectregex.redirectregex.replacement=https://$$1/remote.php/dav
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   cron:
     image: nextcloud:latest
@@ -17311,7 +17311,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   nextcloud_data:
@@ -17525,7 +17525,7 @@ cat > strapi.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   strapi:
     image: strapi/strapi
@@ -17569,7 +17569,7 @@ services:
         - traefik.http.services.strapi.loadbalancer.server.port=1337
         - traefik.http.services.strapi.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   strapi_data:
@@ -17768,7 +17768,7 @@ cat > phpmyadmin.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -17808,7 +17808,7 @@ services:
         - traefik.http.services.phpmyadmin.loadbalancer.server.port=80
         - traefik.http.routers.phpmyadmin.service=phpmyadmin
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -18266,7 +18266,7 @@ services:
 ## Crie suas credenciais ANON_KEY e SERVICE_KEY através do link: https://supabase.com/docs/guides/self-hosting/docker
 
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   studio:
     image: supabase/studio:20240701-05dfbec ## Versão da imagem
@@ -18311,7 +18311,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   kong:
     image: kong:2.8.1 ## Versão da imagem
@@ -18362,7 +18362,7 @@ services:
         - traefik.http.routers.kong.tls=true
 
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   auth:
     image: supabase/gotrue:v2.151.0 ## Versão da imagem
@@ -18428,7 +18428,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   rest:
     image: postgrest/postgrest:v12.0.3 ## Versão da imagem
@@ -18457,7 +18457,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   realtime:
     image: supabase/realtime:v2.25.50 ## Versão da imagem
@@ -18509,7 +18509,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   storage:
     image: supabase/storage-api:v1.0.6 ## Versão da imagem
@@ -18576,7 +18576,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   imgproxy:
     image: darthsim/imgproxy:v3.8.0 ## Versão da imagem
@@ -18611,7 +18611,7 @@ services:
           - node.role == manager
 
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   meta:
     image: supabase/postgres-meta:v0.83.2 ## Versão da imagem
@@ -18640,7 +18640,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   functions:
     image: supabase/edge-runtime:v1.55.0 ## Versão da imagem
@@ -18679,7 +18679,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   analytics:
     image: supabase/logflare:1.4.0 ## Versão da imagem
@@ -18727,7 +18727,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   db:
     image: supabase/postgres:15.1.1.61 ## Versão da imagem
@@ -18780,7 +18780,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   vector:
     image: timberio/vector:0.28.1-alpine ## Versão da imagem
@@ -18812,7 +18812,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   supabase_db_config:
@@ -19020,7 +19020,7 @@ cat > ntfy.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   ntfy:
     image: binwiederhier/ntfy:latest
@@ -19058,7 +19058,7 @@ services:
         - traefik.http.routers.ntfy.middlewares=ntfy-auth
         - traefik.http.routers.ntfy.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   ntfy_cache:
@@ -19333,7 +19333,7 @@ cat > lowcoder.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   lowcoder_api:
     image: lowcoderorg/lowcoder-ce-api-service:latest
@@ -19396,7 +19396,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   lowcoder_node:
     image: lowcoderorg/lowcoder-ce-node-service:latest
@@ -19420,7 +19420,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   lowcoder-frontend:
     image: lowcoderorg/lowcoder-ce-frontend:latest
@@ -19454,7 +19454,7 @@ services:
         - traefik.http.routers.lowcoder.tls.certresolver=letsencryptresolver
         - traefik.http.routers.lowcoder.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   lowcoder_assets:
@@ -19764,7 +19764,7 @@ cat > humhub.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   humhub:
     image: mriedmann/humhub:latest
@@ -19829,7 +19829,7 @@ services:
         - traefik.http.services.humhub.loadbalancer.server.port=80
         - traefik.http.services.humhub.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   humhub_data:
@@ -20070,7 +20070,7 @@ cat > langflow.yaml <<EOL
 version: "3.8"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   langflow:
     image: langflowai/langflow:latest
@@ -20117,7 +20117,7 @@ services:
         - traefik.http.routers.langflow.entrypoints=websecure
         - traefik.http.routers.langflow.tls.certresolver=letsencryptresolver
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   langflow_data:
@@ -20334,7 +20334,7 @@ cat > zep.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   nlp:
     image: ghcr.io/getzep/zep-nlp-server:latest
@@ -20349,7 +20349,7 @@ services:
         constraints:
           - node.role == manager
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   zep:
     image: ghcr.io/getzep/zep:latest
@@ -20400,7 +20400,7 @@ services:
         - traefik.http.services.zep.loadbalancer.passHostHeader=true
         - traefik.http.routers.zep.service=zep
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
     
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -20596,7 +20596,7 @@ cat > openproject.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   openproject:
     image: openproject/openproject:14.1.1
@@ -20655,7 +20655,7 @@ services:
         - traefik.http.services.openproject.loadbalancer.server.port=8080
         - traefik.http.services.openproject.loadbalancer.passHostHeader=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   openproject_pgdata:
@@ -20862,7 +20862,7 @@ cat > yourls.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   yourls:
     image: yourls:latest
@@ -20897,7 +20897,7 @@ services:
         - traefik.http.routers.yourls.service=yourls
         - traefik.http.services.yourls.loadbalancer.server.port=80
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -21116,7 +21116,7 @@ cat > twentycrm.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   twentycrm_server:
     image: twentycrm/twenty:latest
@@ -21185,7 +21185,7 @@ services:
         - traefik.http.routers.twentycrm.entrypoints=websecure
         - traefik.http.routers.twentycrm.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   twentycrm_worker:
     image: twentycrm/twenty:latest
@@ -21244,7 +21244,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   twentycrm_db:
     image: twentycrm/twenty-postgres:latest
@@ -21269,7 +21269,7 @@ services:
           cpus: "0.5"
           memory: 1024M    
     
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   twentycrm_data:
@@ -21461,7 +21461,7 @@ cat > mattermost.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   mattermost:
     image: mattermost/mattermost-team-edition:latest
@@ -21505,7 +21505,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.mattermost.middlewares=sslheader@docker
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   mattermost_data:
@@ -21751,7 +21751,7 @@ cat > outline.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   outline:
     image: outlinewiki/outline:0.75.0
@@ -21834,7 +21834,7 @@ services:
         - traefik.http.routers.outline.service=outline
         - traefik.http.services.outline.loadbalancer.server.port=3000
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   outline_data:
@@ -22005,7 +22005,7 @@ cat > focalboard.yaml <<EOL
 version: "3.8"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   focalboard:
     image: mattermost/focalboard:latest
@@ -22038,7 +22038,7 @@ services:
         - traefik.http.routers.focalboard.entrypoints=websecure
         - traefik.http.routers.focalboard.tls.certresolver=letsencryptresolver
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   fbdata:
@@ -22225,7 +22225,7 @@ cat > glpi.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   glpi:
     image: diouxx/glpi:latest
@@ -22260,7 +22260,7 @@ services:
         - traefik.http.routers.glpi.entrypoints=websecure
         - traefik.http.routers.glpi.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   glpi_glpi:
@@ -22463,7 +22463,7 @@ cat > anythingllm.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   anythingllm:
     image: mintplexlabs/anythingllm:latest
@@ -22506,7 +22506,7 @@ services:
         - traefik.http.routers.anythingllm.entrypoints=websecure
         - traefik.http.routers.anythingllm.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   anythingllm_storage:
@@ -22683,7 +22683,7 @@ cat > excalidraw.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   excalidraw:
     image: excalidraw/excalidraw:latest
@@ -22717,7 +22717,7 @@ services:
         - traefik.http.routers.excalidraw.entrypoints=websecure
         - traefik.http.routers.excalidraw.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 
 volumes:
@@ -22928,7 +22928,7 @@ cat > easyappointments.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   easyapointments:
     image: alextselegidis/easyappointments:latest
@@ -22980,7 +22980,7 @@ services:
         - traefik.http.routers.easyapointments.entrypoints=websecure
         - traefik.http.routers.easyapointments.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   easyapointments_data:
@@ -23273,7 +23273,7 @@ cat > documenso.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   documenso:
     image: documenso/documenso:latest
@@ -23348,7 +23348,7 @@ services:
         - traefik.http.routers.documenso.tls=true
     
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   documenso_cert:
@@ -23614,7 +23614,7 @@ cat > moodle.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   moodle_app:
     image: bitnami/moodle:latest
@@ -23673,7 +23673,7 @@ services:
         - traefik.http.routers.moodle.entrypoints=websecure
         - traefik.http.routers.moodle.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   moodle_mariadb:
     image: bitnami/mariadb:latest
@@ -23705,7 +23705,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 volumes:
   moodle_app_apache_conf:
@@ -23989,7 +23989,7 @@ cat > tooljet.yaml <<EOL
 version: "3.7"
 services:
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   tooljet_app:
     image: tooljet/tooljet:EE-LTS-latest
@@ -24071,7 +24071,7 @@ services:
         - traefik.http.routers.tooljet.entrypoints=websecure
         - traefik.http.routers.tooljet.tls=true
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
   tooljet_postgrest:
     image: postgrest/postgrest:v12.0.2
@@ -24098,7 +24098,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## --------------------------- ORION --------------------------- ##
+## --------------------------- STACK --------------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
