@@ -254,19 +254,19 @@ else
     echo "12/13 - [ OFF ] - Fazendo Upgrade"
 fi
 
-# Verifica se o arquivo SetupOrion já existe
-if [ -e "SetupOrion" ]; then
+# Verifica se o arquivo SetupCloud já existe
+if [ -e "SetupCloud" ]; then
     echo ""
-    rm SetupOrion
+    rm SetupCloud
 fi
 
 # Baixa o script
-curl -sSL https://raw.githubusercontent.com/josemaeldon/SetupFlow/main/SetupOrion -o SetupOrion
+curl -sSL https://raw.githubusercontent.com/josemaeldon/SetupFlow/main/SetupCloud -o SetupCloud
 if [ $? -eq 0 ]; then
     echo "13/13 - [ OK ] - Baixando o script"
     # Executa o script baixado
-    chmod +x SetupOrion
-    ./SetupOrion
+    chmod +x SetupCloud
+    ./SetupCloud
 else
     echo "13/13 - [ OFF ] - Baixando o script"
     echo "Encerrando o setup"
@@ -282,4 +282,4 @@ sudo apt update
 sudo apt upgrade -y
 
 clear
-rm SetupOrion
+rm SetupCloud
