@@ -5,7 +5,7 @@
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 versao() {
-echo -e "                                   \e[97mVersão do SetupOrion: \e[32mv. 2.5.9\e[0m                                  "
+echo -e "                                   \e[97mVersão do SetupFlow: \e[32mv. 2.5.9\e[0m                                  "
 echo -e "\e[32mcloudbr.app/whatsapp1      \e[97m<----- Grupos no WhatsApp ----->     \e[32mcloudbr.app/whatsapp2\e[0m"
 }
 
@@ -134,7 +134,7 @@ creditos_msg() {
     echo -e "$amarelo=                  $branco Se precisar de ajuda/mentoria ou quiser deixar seu feedback                   $amarelo=\e[0m"
     echo -e "$amarelo=                        $branco Nossa comunidade:$amarelo https://discord.gg/MD5dgNR8My                         $amarelo=\e[0m"
     echo -e "$amarelo=                                                                                                 $amarelo=\e[0m"
-    echo -e "$amarelo=                            $branco ou via WhatsApp (comunidade SetupOrion)                             $amarelo=\e[0m"
+    echo -e "$amarelo=                            $branco ou via WhatsApp (comunidade SetupFlow)                             $amarelo=\e[0m"
     echo -e "$amarelo=      $amarelo https://cloudbr.app/whatsapp1 $branco<-- ou -->$amarelo https://cloudbr.app/whatsapp2      $amarelo=\e[0m"
     echo -e "$amarelo=                                                                                                 $amarelo=\e[0m"
     echo -e "$amarelo===================================================================================================\e[0m"
@@ -2619,7 +2619,7 @@ cat > dados_vps << EOL
 [DADOS DA VPS]
 
 Estes dados foram preenchidos na hora que você foi instalar o Traefik e Portainer e
-serão utilizados para realizar as instalações no do SetupOrion v.2
+serão utilizados para realizar as instalações no do SetupFlow v.2
 
 Nome do Servidor: $nome_servidor
 
@@ -16771,9 +16771,9 @@ sleep 1
 mkdir blablabla
 cd blablabla
 
-git clone https://github.com/oriondesign2015/SetupOrion.git > /dev/null 2>&1
+git clone https://github.com/josemaeldon/SetupFlow.git > /dev/null 2>&1
 
-sudo mv /root/blablabla/SetupOrion/Extras/Grafana/monitor-orion /opt
+sudo mv /root/blablabla/SetupFlow/Extras/Grafana/monitor-orion /opt
 
 cd
 
@@ -18286,7 +18286,7 @@ services:
 
       ## Branding
       - DEFAULT_ORGANIZATION_NAME=OrionDesign ## Nome da Empresa
-      - DEFAULT_PROJECT_NAME=SetupOrion ## Nome do Projeto
+      - DEFAULT_PROJECT_NAME=SetupFlow ## Nome do Projeto
 
       ## Urls
       - SUPABASE_PUBLIC_URL=https://$url_supabase ## Link do supabase
@@ -24304,28 +24304,28 @@ chatwoot.mail() {
     fi
     
     # Baixa os novos arquivos
-    wget -O confirmation_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/confirmation_instructions.html.erb > /dev/null 2>&1
+    wget -O confirmation_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/confirmation_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "5/9 - [ OK ]"
     else
         echo "5/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O password_change.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/password_change.html.erb > /dev/null 2>&1
+    wget -O password_change.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/password_change.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "6/9 - [ OK ]"
     else
         echo "6/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O reset_password_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/reset_password_instructions.html.erb > /dev/null 2>&1
+    wget -O reset_password_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/reset_password_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "7/9 - [ OK ]"
     else
         echo "7/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O unlock_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/unlock_instructions.html.erb > /dev/null 2>&1
+    wget -O unlock_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/unlock_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "8/9 - [ OK ]"
     else
@@ -24395,28 +24395,28 @@ chatwoot.n.mail() {
     fi
     
     # Baixa os novos arquivos
-    wget -O confirmation_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/confirmation_instructions.html.erb > /dev/null 2>&1
+    wget -O confirmation_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/confirmation_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "5/9 - [ OK ]"
     else
         echo "5/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O password_change.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/password_change.html.erb > /dev/null 2>&1
+    wget -O password_change.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/password_change.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "6/9 - [ OK ]"
     else
         echo "6/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O reset_password_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/reset_password_instructions.html.erb > /dev/null 2>&1
+    wget -O reset_password_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/reset_password_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "7/9 - [ OK ]"
     else
         echo "7/9 - [ OFF ]"
         echo "Não foi possivel baixar email."
     fi
-    wget -O unlock_instructions.html.erb https://github.com/oriondesign2015/SetupOrion/raw/main/Extras/Chatwoot/emails/unlock_instructions.html.erb > /dev/null 2>&1
+    wget -O unlock_instructions.html.erb https://github.com/josemaeldon/SetupFlow/raw/main/Extras/Chatwoot/emails/unlock_instructions.html.erb > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "8/9 - [ OK ]"
     else
