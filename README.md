@@ -1,4 +1,4 @@
-<img src="https://github.com/oriondesign2015/SetupOrion/assets/139019565/2202b6a6-55ba-48ca-92df-7fcab5d20857" alt=”SetupOrion”>
+<img src="#" alt=”SetupOrion”>
 <p align="center">
   Este Auto instalador é uma solução <b>100% gratuita</b>, com o intuido de ajudar toda a comunidade a instalar as principais ferramentas do mercado de Automações/Marketing em seu servidor.
   <b>Você não precisa instalar todos os programas contidos no mesmo, pois você poderá escolher qual das ferramentas você quer instalar.</b>
@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="https://oriondesign.art.br/whatsapp1"><img src="https://img.shields.io/badge/Comunidade_no_Whatsapp-4EA94B?style=for-the-badge&labelColor=black&logo=whatsapp&logoColor=4EA94B" alt="Comunidade no Whatsapp #01"></a>    
-  <a href="https://oriondesign.art.br/whatsapp2"><img src="https://img.shields.io/badge/Comunidade_no_Whatsapp-4EA94B?style=for-the-badge&labelColor=black&logo=whatsapp&logoColor=4EA94B" alt="Comunidade no Whatsapp #02"></a>    
-  <a href="https://youtube.com/oriondesign_oficial"><img src="https://img.shields.io/badge/Playlist_do_Setup_Orion-FF0000?style=for-the-badge&labelColor=ffffff&logo=youtube&logoColor=FF0000" alt="Inscreva-se no meu canal"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Comunidade_no_Whatsapp-4EA94B?style=for-the-badge&labelColor=black&logo=whatsapp&logoColor=4EA94B" alt="Comunidade no Whatsapp #01"></a>    
+  <a href="#"><img src="https://img.shields.io/badge/Comunidade_no_Whatsapp-4EA94B?style=for-the-badge&labelColor=black&logo=whatsapp&logoColor=4EA94B" alt="Comunidade no Whatsapp #02"></a>    
+  <a href="#"><img src="https://img.shields.io/badge/Playlist_do_Setup_Orion-FF0000?style=for-the-badge&labelColor=ffffff&logo=youtube&logoColor=FF0000" alt="Inscreva-se no meu canal"></a>
 </p>
 
 <h1></h1>
@@ -38,15 +38,15 @@ bash <(curl -sSL setup.cloudbr.app)
 
 <h1></h1>
 <h3 align="center">📌 Principais contribuidores</h3>
-<a align="center" href="https://github.com/oriondesign2015/setuporion/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=oriondesign2015/setuporion" />
+<a align="center" href="#">
+  <img src="#" />
 </a>
 
-<a href="https://star-history.com/#oriondesign2015/SetupOrion&Date">
+<a href="#">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=oriondesign2015/SetupOrion&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=oriondesign2015/SetupOrion&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=oriondesign2015/SetupOrion&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="#" />
+   <source media="(prefers-color-scheme: light)" srcset="#" />
+   <img alt="Star History Chart" src="#" />
  </picture>
 </a>
 
